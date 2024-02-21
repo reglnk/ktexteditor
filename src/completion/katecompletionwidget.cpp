@@ -1207,22 +1207,26 @@ QWidget *KateCompletionWidget::currentEmbeddedWidget()
 
 void KateCompletionWidget::cursorDown()
 {
-    m_entryList->nextCompletion();
+    // m_entryList->nextCompletion();
+    abortCompletion();
 }
 
 void KateCompletionWidget::cursorUp()
 {
-    m_entryList->previousCompletion();
+    // m_entryList->previousCompletion();
+    abortCompletion();
 }
 
 void KateCompletionWidget::pageDown()
 {
-    m_entryList->pageDown();
+    // m_entryList->pageDown();
+    m_entryList->nextCompletion();
 }
 
 void KateCompletionWidget::pageUp()
 {
-    m_entryList->pageUp();
+    // m_entryList->pageUp();
+    m_entryList->previousCompletion();
 }
 
 void KateCompletionWidget::top()
